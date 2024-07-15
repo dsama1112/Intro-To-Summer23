@@ -9,6 +9,9 @@ odd_temperature = []
 
 avg_temp = []
 
+higher_than_avg = []
+
+
 for i in range (7):
 	temperature.append(random.randint(26, 41))
 	print(temperature)
@@ -57,7 +60,20 @@ print("lowest temperature day is: ", lowest_day)
 
 for i in range(7):
 	avg_temp = sum(temperature) / 7
+
+print("The average temperature is: ", avg_temp)
+
+
+# avg_temp = temperature[0]
+for i in range(7):
+	if avg_temp < temperature[i]:
+		avg_temp = temperature[i]
+		higher_than_avg = days_of_the_week[i]
+
+print("The days that have a temperature higher than the average are: ", days_of_the_week[i])
+
+
+
 	
 	# temperature / 7 = avg_temp
 
-print("The average temperature is: ", avg_temp)
